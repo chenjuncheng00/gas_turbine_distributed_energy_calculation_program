@@ -1485,8 +1485,8 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
         wmiObjSet = GetObject("winmgmts:{impersonationLevel=impersonate}").InstancesOf("Win32_NetworkAdapterConfiguration")
         For Each obj In wmiObjSet
             MAC = obj.MACAddress
-            'MAC地址白名单(王朝龙笔记本，谢伟笔记本)
-            If MAC = "3C:91:80:40:48:BF" Or MAC = "F8:A2:D6:FE:06:9D" Then
+            'MAC地址白名单(随便写一个)
+            If MAC = "45:40:C1:8F:AD:4A" Then
                 MACTEST = 1
                 Exit For
             Else
@@ -1542,7 +1542,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
                 .send
                 strText = .getResponseHeader("Date")
                 Dim GetDate = DateAdd("h", 8, Split(Replace(strText, " GMT", ""), ",")(1)) '将获取的字符串格式GMT网络时间加8小时转成北京时间，并改成日期格式
-                If GetDate >= #09/09/2020# Then '月/日/年，验证网络时间
+                If GetDate >= #01/01/2020# Then '月/日/年，验证网络时间
                     '保存表格的改动
                     ExcelApp.Application.DisplayAlerts = False
                     ExcelApp.ThisWorkbook.Save()
@@ -1560,7 +1560,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             '进程暂停一段时间（2000分钟）
             Threading.Thread.Sleep(120000000)
             Dim Local_Time = Date.Now '获取系统本地时间
-            Dim Dead_Time = Convert.ToDateTime("2020/09/09 01:00:00") '设定程序有效期截止时间
+            Dim Dead_Time = Convert.ToDateTime("2020/01/01 01:00:00") '设定程序有效期截止时间
             If Date.Compare(Local_Time, Dead_Time) > 0 Then '大于0，说明系统本地时间大于程序有效期，程序不可以继续使用
                 '保存表格的改动
                 ExcelApp.Application.DisplayAlerts = False
@@ -1586,7 +1586,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
         '屏蔽ctrl+break
         ExcelApp.Application.EnableCancelKey = XlEnableCancelKey.xlDisabled
         Dim Local_Time = Date.Now '获取系统本地时间
-        Dim Dead_Time = Convert.ToDateTime("2020/03/03 01:00:00") '设定程序有效期截止时间
+        Dim Dead_Time = Convert.ToDateTime("2020/01/01 01:00:00") '设定程序有效期截止时间
         If Date.Compare(Local_Time, Dead_Time) > 0 Then '大于0，说明系统本地时间大于程序有效期，程序不可以继续使用
             '保存表格的改动
             ExcelApp.Application.DisplayAlerts = False
@@ -1625,7 +1625,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
                 .send
                 strText = .getResponseHeader("Date")
                 Dim GetDate = DateAdd("h", 8, Split(Replace(strText, " GMT", ""), ",")(1)) '将获取的字符串格式GMT网络时间加8小时转成北京时间，并改成日期格式
-                If GetDate >= #03/03/2020# Then '月/日/年
+                If GetDate >= #01/01/2020# Then '月/日/年
                     '保存表格的改动
                     ExcelApp.Application.DisplayAlerts = False
                     ExcelApp.ThisWorkbook.Save()

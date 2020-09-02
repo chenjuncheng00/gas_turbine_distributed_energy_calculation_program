@@ -167,7 +167,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
                 '最大燃机发电功率
                 ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 19).Value = ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(qq, 5).Value
                 '燃机发电效率
-                ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 21).Value = ExcelApp.WorksheetFunction.RoundUp(ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(qq, 6).Value / 100, 5)
+                ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 21).Value = Math.Round(ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(qq, 6).Value / 100, 5)
             End If
         Next
         '燃气轮机(2)参数均设置为0
@@ -177,15 +177,15 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 24).Value = 0
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 26), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 28)).Value = 0
         '余热锅炉(1)热效率——抽凝机
-        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 23).Value = ExcelApp.WorksheetFunction.RoundUp(ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(qq, 4).Value / 100, 5)
+        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 23).Value = Math.Round(ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(qq, 4).Value / 100, 5)
         '汽轮机(1)蒸汽循环总效率——抽凝机
-        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 25).Value = ExcelApp.WorksheetFunction.RoundUp(ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(qq, 4).Value / 100, 5)
+        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 25).Value = Math.Round(ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(qq, 4).Value / 100, 5)
         '设置蒸汽焓值修正系数
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 29).Value = 1
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 30), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 32)).Value = 0
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 33).Value = 1
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 34).Value = 0
-        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 35).Value = ExcelApp.WorksheetFunction.RoundUp(ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(qq, 76).Value, 2)
+        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 35).Value = Math.Round(ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(qq, 76).Value, 2)
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 36), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 38)).Value = 0
         '蒸汽量均设置为0
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 4), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 15)).Value = 0
@@ -207,13 +207,13 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 18), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 18)).Value = 20
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 19), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 19)).Value = ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(qq, 5).Value
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 20), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 20)).Value = 0
-        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 21), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 21)).Value = ExcelApp.WorksheetFunction.RoundUp(ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(qq, 6).Value / 100, 5)
+        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 21), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 21)).Value = Math.Round(ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(qq, 6).Value / 100, 5)
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 22), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 22)).Value = 0
         '读取余热锅炉（1）——抽凝机热效率，并将余热锅炉（2）热效率设置为0
-        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 23), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 23)).Value = ExcelApp.WorksheetFunction.RoundUp(ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(qq, 4).Value / 100, 5)
+        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 23), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 23)).Value = Math.Round(ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(qq, 4).Value / 100, 5)
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 24), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 24)).Value = 0
         '读取抽凝机（1）蒸汽循环总效率，并将其他蒸汽循环总效率全部设置为0
-        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 25), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 25)).Value = ExcelApp.WorksheetFunction.RoundUp(ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(qq, 4).Value / 100, 5)
+        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 25), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 25)).Value = Math.Round(ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(qq, 4).Value / 100, 5)
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 26), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 28)).Value = 0
         '抽凝机（1）排汽焓值修正系数设置为1，汽轮机（1）主蒸汽焓值修正系数设置为1，其它修正系数全部设置为0
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 29), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 29)).Value = 1
@@ -222,11 +222,11 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 34), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 34)).Value = 0
         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 36), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 38)).Value = 0
         '抽凝机（1）凝汽器排汽焓值（kj/kg）
-        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 35), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 35)).Value = ExcelApp.WorksheetFunction.RoundUp(ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(qq, 76).Value, 2)
+        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(7, 35), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 35)).Value = Math.Round(ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(qq, 76).Value, 2)
         '燃气轮机(1)负荷率保持不变，抽凝机抽汽量从2%变化到80%，每次变化2%
         For i = 1 To 40
             b = 0.02 * i
-            ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + i, 4), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 4)).Value = ExcelApp.WorksheetFunction.RoundUp(a * b, 4)
+            ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + i, 4), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(46, 4)).Value = Math.Round(a * b, 4)
             '读取变工况计算输入量
             ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(3, 2), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(3, 38)).Value = ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Range(ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + i, 2), ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + i, 38)).Value
             '返回变工况计算结果
@@ -334,9 +334,9 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For b = 16 To 21
                 If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value) Then
                     '燃气轮机(1)不同温度下实际最大发电功率（kW)
-                    ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 19).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b).Value) * rj1kw, 2)
+                    ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 19).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b).Value) * rj1kw, 2)
                     '燃气轮机(2)不同温度下实际最大发电功率（kW)
-                    ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 20).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b).Value) * rj2kw, 2)
+                    ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 20).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b).Value) * rj2kw, 2)
                 ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
                     XZ = MsgBox("环境温度不可以大于40℃或者低于-20℃", vbOK)
                     Exit For
@@ -360,7 +360,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For b = 6 To 12
                 If (RJFHL1Array(a) <= ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value And RJFHL1Array(a) >= ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value) Then
                     '燃气轮机（1）计算用基准发电效率（20℃时）数组
-                    RJFDXLJZ1Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b).Value) / 100, 5)
+                    RJFDXLJZ1Array(a) = Math.Round(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b).Value) / 100, 5)
                 ElseIf (RJFHL1Array(a) = 0) Then
                     RJFDXLJZ1Array(a) = 0
                 ElseIf (RJFHL1Array(a) > 0 And RJFHL1Array(a) < 0.4) Then
@@ -377,7 +377,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For b = 6 To 12
                 If (RJFHL2Array(a) <= ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value And RJFHL2Array(a) >= ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value) Then
                     '燃气轮机（2）计算用基准发电效率（20℃时）数组
-                    RJFDXLJZ2Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b).Value) / 100, 5)
+                    RJFDXLJZ2Array(a) = Math.Round(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b).Value) / 100, 5)
                 ElseIf (RJFHL2Array(a) = 0) Then
                     RJFDXLJZ2Array(a) = 0
                 ElseIf (RJFHL2Array(a) > 0 And RJFHL2Array(a) < 0.4) Then
@@ -395,9 +395,9 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For b = 26 To 31
                 If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value) Then
                     '燃气轮机(1)不同温度下不同负荷率的发电效率
-                    ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 21).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b).Value) * RJFDXLJZ1Array(a), 5)
+                    ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 21).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(kk, b).Value) * RJFDXLJZ1Array(a), 5)
                     '燃气轮机(2)不同温度下不同负荷率的发电效率
-                    ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 22).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b).Value) * RJFDXLJZ2Array(a), 5)
+                    ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 22).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("燃气轮机变负荷&环境温度").Cells(ll, b).Value) * RJFDXLJZ2Array(a), 5)
                 ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
                     XZ = MsgBox("环境温度不可以大于40℃或者低于-20℃", vbOK)
                     Exit For
@@ -426,7 +426,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 4 To 10
                     If (RJFHL1Array(a) <= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value And RJFHL1Array(a) >= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        CNYRGLJZXL1Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value) / 100, 5)
+                        CNYRGLJZXL1Array(a) = Math.Round(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value) / 100, 5)
                     ElseIf (RJFHL1Array(a) = 0) Then
                         CNYRGLJZXL1Array(a) = 0
                     ElseIf (RJFHL1Array(a) > 0 And RJFHL1Array(a) < 0.4) Then
@@ -444,7 +444,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 29 To 35
                     If (RJFHL1Array(a) <= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value And RJFHL1Array(a) >= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        BYYRGLJZXL1Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value) / 100, 5)
+                        BYYRGLJZXL1Array(a) = Math.Round(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value) / 100, 5)
                     ElseIf (RJFHL1Array(a) = 0) Then
                         BYYRGLJZXL1Array(a) = 0
                     ElseIf (RJFHL1Array(a) > 0 And RJFHL1Array(a) < 0.4) Then
@@ -462,7 +462,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 4 To 10
                     If (RJFHL2Array(a) <= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value And RJFHL2Array(a) >= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        CNYRGLJZXL2Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value) / 100, 5)
+                        CNYRGLJZXL2Array(a) = Math.Round(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value) / 100, 5)
                     ElseIf (RJFHL2Array(a) = 0) Then
                         CNYRGLJZXL2Array(a) = 0
                     ElseIf (RJFHL2Array(a) > 0 And RJFHL2Array(a) < 0.4) Then
@@ -480,7 +480,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 29 To 35
                     If (RJFHL2Array(a) <= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value And RJFHL2Array(a) >= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        BYYRGLJZXL2Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value) / 100, 5)
+                        BYYRGLJZXL2Array(a) = Math.Round(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value) / 100, 5)
                     ElseIf (RJFHL2Array(a) = 0) Then
                         BYYRGLJZXL2Array(a) = 0
                     ElseIf (RJFHL2Array(a) > 0 And RJFHL2Array(a) < 0.4) Then
@@ -498,7 +498,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 16 To 21
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 23).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value) * CNYRGLJZXL1Array(a), 5)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 23).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value) * CNYRGLJZXL1Array(a), 5)
                     ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
                         XZ = MsgBox("环境温度不可以大于40℃或者低于-20℃", vbOK)
                         Exit For
@@ -511,7 +511,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 41 To 46
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 23).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value) * BYYRGLJZXL1Array(a), 5)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 23).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(kk, b).Value) * BYYRGLJZXL1Array(a), 5)
                     ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
                         XZ = MsgBox("环境温度不可以大于40℃或者低于-20℃", vbOK)
                         Exit For
@@ -524,7 +524,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 16 To 21
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 24).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value) * CNYRGLJZXL2Array(a), 5)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 24).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value) * CNYRGLJZXL2Array(a), 5)
                     ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
                         XZ = MsgBox("环境温度不可以大于40℃或者低于-20℃", vbOK)
                         Exit For
@@ -537,7 +537,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 41 To 46
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 24).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value) * BYYRGLJZXL2Array(a), 5)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 24).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("余热锅炉变负荷&环境温度").Cells(ll, b).Value) * BYYRGLJZXL2Array(a), 5)
                     ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
                         XZ = MsgBox("环境温度不可以大于40℃或者低于-20℃", vbOK)
                         Exit For
@@ -574,7 +574,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 4 To 10
                     If (RJFHL1Array(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value And RJFHL1Array(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        CNZQXHZXL1Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value) / 100, 5)
+                        CNZQXHZXL1Array(a) = Math.Round(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value) / 100, 5)
                     ElseIf (RJFHL1Array(a) = 0) Then
                         CNZQXHZXL1Array(a) = 0
                     ElseIf (RJFHL1Array(a) > 0 And RJFHL1Array(a) < 0.4) Then
@@ -592,7 +592,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 29 To 35
                     If (RJFHL1Array(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value And RJFHL1Array(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        BYZQXHZXL1Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value) / 100, 5)
+                        BYZQXHZXL1Array(a) = Math.Round(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value) / 100, 5)
                     ElseIf (RJFHL1Array(a) = 0) Then
                         BYZQXHZXL1Array(a) = 0
                     ElseIf (RJFHL1Array(a) > 0 And RJFHL1Array(a) < 0.4) Then
@@ -610,7 +610,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 4 To 10
                     If (RJFHL2Array(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value And RJFHL2Array(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        CNZQXHZXL2Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value) / 100, 5)
+                        CNZQXHZXL2Array(a) = Math.Round(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value) / 100, 5)
                     ElseIf (RJFHL2Array(a) = 0) Then
                         CNZQXHZXL2Array(a) = 0
                     ElseIf (RJFHL2Array(a) > 0 And RJFHL2Array(a) < 0.4) Then
@@ -628,7 +628,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 29 To 35
                     If (RJFHL2Array(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value And RJFHL2Array(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        BYZQXHZXL2Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value) / 100, 5)
+                        BYZQXHZXL2Array(a) = Math.Round(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value) / 100, 5)
                     ElseIf (RJFHL2Array(a) = 0) Then
                         BYZQXHZXL2Array(a) = 0
                     ElseIf (RJFHL2Array(a) > 0 And RJFHL2Array(a) < 0.4) Then
@@ -646,7 +646,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 16 To 21
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 25).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value) * CNZQXHZXL1Array(a), 5)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 25).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value) * CNZQXHZXL1Array(a), 5)
                         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 27).Value = 0
                     ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
                         XZ = MsgBox("环境温度不可以大于40℃或者低于-20℃", vbOK)
@@ -660,7 +660,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 41 To 46
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 27).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value) * BYZQXHZXL1Array(a), 5)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 27).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(kk, b).Value) * BYZQXHZXL1Array(a), 5)
                         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 25).Value = 0
                     ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
                         XZ = MsgBox("环境温度不可以大于40℃或者低于-20℃", vbOK)
@@ -674,7 +674,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 16 To 21
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 26).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value) * CNZQXHZXL2Array(a), 5)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 26).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value) * CNZQXHZXL2Array(a), 5)
                         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 28).Value = 0
                     ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
                         XZ = MsgBox("环境温度不可以大于40℃或者低于-20℃", vbOK)
@@ -688,7 +688,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 41 To 46
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 28).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value) * BYZQXHZXL2Array(a), 5)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 28).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机变负荷&环境温度").Cells(ll, b).Value) * BYZQXHZXL2Array(a), 5)
                         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 26).Value = 0
                     ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
                         XZ = MsgBox("环境温度不可以大于40℃或者低于-20℃", vbOK)
@@ -728,7 +728,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
         For a = 1 To n
             For b = 4 To 10
                 If (RJFHL1Array(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And RJFHL1Array(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                    ZZQHZXZXS1Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value), 5)
+                    ZZQHZXZXS1Array(a) = Math.Round(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value), 5)
                 ElseIf (RJFHL1Array(a) = 0) Then
                     ZZQHZXZXS1Array(a) = 0
                 ElseIf (RJFHL1Array(a) > 0 And RJFHL1Array(a) < 0.4) Then
@@ -744,7 +744,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
         For a = 1 To n
             For b = 16 To 21
                 If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                    ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 29).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value) * ZZQHZXZXS1Array(a), 5)
+                    ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 29).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value) * ZZQHZXZXS1Array(a), 5)
                 ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
                     XZ = MsgBox("环境温度不可以大于40℃或者低于-20℃", vbOK)
                     Exit For
@@ -755,7 +755,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
         For a = 1 To n
             For b = 4 To 10
                 If (RJFHL2Array(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And RJFHL2Array(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                    ZZQHZXZXS2Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value), 5)
+                    ZZQHZXZXS2Array(a) = Math.Round(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value), 5)
                 ElseIf (RJFHL2Array(a) = 0) Then
                     ZZQHZXZXS2Array(a) = 0
                 ElseIf (RJFHL2Array(a) > 0 And RJFHL2Array(a) < 0.4) Then
@@ -771,7 +771,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
         For a = 1 To n
             For b = 16 To 21
                 If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                    ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 30).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value) * ZZQHZXZXS2Array(a), 5)
+                    ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 30).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value) * ZZQHZXZXS2Array(a), 5)
                 ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
                     XZ = MsgBox("环境温度不可以大于40℃或者低于-20℃", vbOK)
                     Exit For
@@ -795,7 +795,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 28 To 34
                     If (RJFHL1Array(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And RJFHL1Array(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        BYZQHZXZXS1Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value), 5)
+                        BYZQHZXZXS1Array(a) = Math.Round(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value), 5)
                     ElseIf (RJFHL1Array(a) = 0) Then
                         BYZQHZXZXS1Array(a) = 0
                     ElseIf (RJFHL1Array(a) > 0 And RJFHL1Array(a) < 0.4) Then
@@ -813,7 +813,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 40 To 45
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 31).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value) * BYZQHZXZXS1Array(a), 5)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 31).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value) * BYZQHZXZXS1Array(a), 5)
                         '抽凝机（1）抽汽焓值修正系数等于0
                         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 33).Value = 0
                     ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
@@ -828,7 +828,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 28 To 34
                     If (RJFHL2Array(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And RJFHL2Array(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        BYZQHZXZXS2Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value), 5)
+                        BYZQHZXZXS2Array(a) = Math.Round(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value), 5)
                     ElseIf (RJFHL2Array(a) = 0) Then
                         BYZQHZXZXS2Array(a) = 0
                     ElseIf (RJFHL2Array(a) > 0 And RJFHL2Array(a) < 0.4) Then
@@ -846,7 +846,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 40 To 45
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 32).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value) * BYZQHZXZXS2Array(a), 5)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 32).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value) * BYZQHZXZXS2Array(a), 5)
                         '抽凝机（2）抽汽焓值修正系数等于0
                         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 34).Value = 0
                     ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
@@ -873,7 +873,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 52 To 58
                     If (RJFHL1Array(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And RJFHL1Array(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        JZBYHZ1Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value), 2)
+                        JZBYHZ1Array(a) = Math.Round(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value), 2)
                     ElseIf (RJFHL1Array(a) = 0) Then
                         JZBYHZ1Array(a) = 0
                     ElseIf (RJFHL1Array(a) > 0 And RJFHL1Array(a) < 0.4) Then
@@ -891,7 +891,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 64 To 69
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 37).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value) * JZBYHZ1Array(a), 2)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 37).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value) * JZBYHZ1Array(a), 2)
                         '抽凝机（1）进入凝汽器排汽焓值（kj/kg）等于0
                         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 35).Value = 0
                     ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
@@ -906,7 +906,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 52 To 58
                     If (RJFHL2Array(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And RJFHL2Array(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        JZBYHZ2Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value), 2)
+                        JZBYHZ2Array(a) = Math.Round(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value), 2)
                     ElseIf (RJFHL2Array(a) = 0) Then
                         JZBYHZ2Array(a) = 0
                     ElseIf (RJFHL2Array(a) > 0 And RJFHL2Array(a) < 0.4) Then
@@ -924,7 +924,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 64 To 69
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 38).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value) * JZBYHZ2Array(a), 2)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 38).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value) * JZBYHZ2Array(a), 2)
                         '抽凝机（2）进入凝汽器排汽焓值（kj/kg）等于0
                         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 36).Value = 0
                     ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
@@ -951,7 +951,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 76 To 82
                     If (RJFHL1Array(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And RJFHL1Array(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        CNPQHZ1Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value), 2)
+                        CNPQHZ1Array(a) = Math.Round(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value), 2)
                     ElseIf (RJFHL1Array(a) = 0) Then
                         CNPQHZ1Array(a) = 0
                     ElseIf (RJFHL1Array(a) > 0 And RJFHL1Array(a) < 0.4) Then
@@ -969,7 +969,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 88 To 93
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 35).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value) * CNPQHZ1Array(a), 2)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 35).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value) * CNPQHZ1Array(a), 2)
                         '抽背机（1）基准背压焓值（kj/kg）等于0
                         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 37).Value = 0
                     ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
@@ -984,7 +984,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 76 To 82
                     If (RJFHL2Array(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And RJFHL2Array(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        CNPQHZ2Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value), 2)
+                        CNPQHZ2Array(a) = Math.Round(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value), 2)
                     ElseIf (RJFHL2Array(a) = 0) Then
                         CNPQHZ2Array(a) = 0
                     ElseIf (RJFHL2Array(a) > 0 And RJFHL2Array(a) < 0.4) Then
@@ -1002,7 +1002,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 88 To 93
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 36).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value) * CNPQHZ2Array(a), 2)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 36).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value) * CNPQHZ2Array(a), 2)
                         '抽背机（2）背压焓值修正系数等于0
                         ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 38).Value = 0
                     ElseIf (TEMPArray(a) < -20 Or TEMPArray(a) > 40) Then
@@ -1029,7 +1029,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 28 To 34
                     If (RJFHL1Array(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And RJFHL1Array(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        CQHZXZXS1Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value), 5)
+                        CQHZXZXS1Array(a) = Math.Round(((((RJFHL1Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value), 5)
                     ElseIf (RJFHL1Array(a) = 0) Then
                         CQHZXZXS1Array(a) = 0
                     ElseIf (RJFHL1Array(a) > 0 And RJFHL1Array(a) < 0.4) Then
@@ -1047,7 +1047,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 40 To 45
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 33).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value) * CQHZXZXS1Array(a), 5)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 33).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(kk, b).Value) * CQHZXZXS1Array(a), 5)
                         '如果是抽凝机
                         If ExcelApp.ThisWorkbook.Worksheets("设备选型&经济指标").Cells(11, 2).Value = "抽凝机" Then
                             '抽背机（1）背压焓值修正系数等于0
@@ -1065,7 +1065,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 28 To 34
                     If (RJFHL2Array(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And RJFHL2Array(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        CQHZXZXS2Array(a) = ExcelApp.WorksheetFunction.RoundUp(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value), 5)
+                        CQHZXZXS2Array(a) = Math.Round(((((RJFHL2Array(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value), 5)
                     ElseIf (RJFHL2Array(a) = 0) Then
                         CQHZXZXS2Array(a) = 0
                     ElseIf (RJFHL2Array(a) > 0 And RJFHL2Array(a) < 0.4) Then
@@ -1083,7 +1083,7 @@ Public Class Com燃气轮机分布式能源负荷分析计算程序
             For a = 1 To n
                 For b = 40 To 45
                     If (TEMPArray(a) >= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value And TEMPArray(a) <= ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value) Then
-                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 34).Value = ExcelApp.WorksheetFunction.RoundUp(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value) * CQHZXZXS2Array(a), 5)
+                        ExcelApp.ThisWorkbook.Worksheets("变工况计算输入").Cells(6 + a, 34).Value = Math.Round(((((TEMPArray(a) - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value) / (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(3, b).Value)) * (ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b + 1).Value - ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value)) + ExcelApp.ThisWorkbook.Worksheets("汽轮机蒸汽参数变工况&环境温度").Cells(ll, b).Value) * CQHZXZXS2Array(a), 5)
                         '如果是抽凝机
                         If ExcelApp.ThisWorkbook.Worksheets("设备选型&经济指标").Cells(33, 2).Value = "抽凝机" Then
                             '抽背机（2）背压焓值修正系数等于0

@@ -7,10 +7,10 @@ Imports System.Runtime.InteropServices
 '查看程序集特性的值
 <Assembly: AssemblyTitle("燃气轮机分布式能源负荷分析计算程序")>
 <Assembly: AssemblyDescription("燃气轮机分布式能源负荷分析计算程序")>
-<Assembly: AssemblyCompany("上海发电设备成套设计研究院")>
+<Assembly: AssemblyCompany("陈俊丞")>
 <Assembly: AssemblyProduct("燃气轮机分布式能源负荷分析计算程序")>
 <Assembly: AssemblyCopyright("Copyright © 陈俊丞 SINCE 2016")>
-<Assembly: AssemblyTrademark("SPERI")>
+<Assembly: AssemblyTrademark("陈俊丞")>
 <Assembly: ComVisible(True)>
 '如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
 <Assembly: Guid("606e76f3-8b0c-4297-97e9-6743d8049a7a")>
